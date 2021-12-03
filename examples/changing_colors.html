@@ -1,0 +1,16 @@
+<body id='body_id'>
+  <button onclick="changeColor(0);">Click me!</button>
+  <script>
+    const elem = document.getElementById('body_id');
+    
+    function changeColor(index=0) {
+      elem.style.backgroundColor = `hsl(${index}, 50%, 50%)`;
+      setTimeout(changeColor, 100, ++index);
+    }
+  </script>
+  <style>
+    #body_id{
+      background-color: hsl(0,50%,50%);
+    }
+  </style>
+</body>
